@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --button-background: #444;
+    --button-hover: #555;
+    --calculator-background: #1e1e1e;
+    --display-background: #333;
+}
+
+.light-theme {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --button-background: #ddd;
+    --button-hover: #ccc;
+    --calculator-background: #f0f0f0;
+    --display-background: #e0e0e0;
+}
+
+.calculator {
+    background: var(--calculator-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 320px;
+    width: 100%;
+}
+
+.display {
+    text-align: right;
+    padding: 20px;
+    font-size: 2em;
+    border: none;
+    background: var(--display-background);
+    color: var(--text-color);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    background: var(--button-background);
+    color: var(--text-color);
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: var(--button-hover);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#theme-toggle:hover {
+    color: var(--button-hover);
+}
+
+#convert-currency {
+    grid-column: span 4;
+    background: var(--button-background);
+    color: var(--text-color);
+    font-size: 1.2em;
+}
+
+#convert-currency:hover {
+    background: var(--button-hover);
+}
+
+@media (max-width: 400px) {
+    .btn {
+        padding: 15px;
+        font-size: 1.2em;
+    }
+}

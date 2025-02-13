@@ -1,0 +1,18 @@
+{
+  "name": "advanced-calculator-app",
+  "version": "1.0.0",
+  "description": "An advanced calculator app with various features including currency conversion and scientific functions.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "parcel": "^2.13.3",
+    "parcel-bundler": "^1.12.5"
+  },
+  "author": "",
+  "license": "ISC"
+}
